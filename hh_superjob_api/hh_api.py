@@ -4,9 +4,11 @@ import requests
 
 class HH(VacanciApi):
 
-    api_key = 'https://api.hh.ru/vacancies'
-    @classmethod
-    def get_request(cls):
-        return requests.get(cls.api_key)
+    def __init__(self, ):
+        self.url = 'https://api.hh.ru/'
+
+    def get_request(self, query_text):
+        return requests.get(f'{self.url}vacancies/?text={query_text}')
+
 
 
