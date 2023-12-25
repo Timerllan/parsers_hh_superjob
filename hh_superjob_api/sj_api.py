@@ -1,7 +1,6 @@
-from abc_method import VacanciApi
 import requests
 import os
-
+from parsers_hh_superjob.hh_superjob_api.abc_method import VacanciApi
 from parsers_hh_superjob.objects.vacancy import Vacancy
 
 
@@ -28,6 +27,6 @@ class SuperJob(VacanciApi):
         else:
             return []
 
-
 sj = SuperJob()
 print(sj.get_request('python'))
+

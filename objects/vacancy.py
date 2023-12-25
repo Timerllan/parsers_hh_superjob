@@ -7,10 +7,10 @@ class Vacancy:
         self.name = name
 
     def __repr__(self):
-        return f'{self.name}, {self.salary}'
+        return f'{self.name}, {self.salary}, {self.url}, {self.description}'
 
     def __str__(self):
-        return f'{self.name}, {self.salary}'
+        return f'{self.name}, {self.salary}, {self.url}, {self.description}'
 
     def __eq__(self, other):
         return self.salary == other.salary
