@@ -17,9 +17,9 @@ class HH(VacanciApi):
             salary_hh = hh_vacancy.get('salary')
 
             if salary_hh:
-                salary_from = salary_hh.get('from', 0)
-                salary_to = salary_hh.get('to', 0)
-                salary = salary_from, salary_to
+                salary_from = salary_hh.get('to', 0) if salary_hh.get('to') else 0
+                salary_to = salary_hh.get('to') if salary_hh.get('to') else 0
+                salary = salary_from if salary_from else salary_to
 
 
             else:
@@ -29,9 +29,3 @@ class HH(VacanciApi):
                               hh_vacancy['snippet']['requirement'])
             result.append(vacancy)
         return result
-
-
-if __name__ == '__main__':
-    hh = HH()
-    for i in hh.get_request('python'):
-        print(i)
