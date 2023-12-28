@@ -29,13 +29,14 @@ def format_saver(result):
     while True:
         saver = int(input('сохранение файла 0-json\n'))
         file_name = input('назовите файл')
-        if saver >= 3:
-            print('не правильный ввод есть только 3 варианта')
+        if saver >= 1:
+            print('не правильный ввод есть только 1 вариант')
             continue
 
         elif saver == 0:
             sf = SaverFile(result)
             sf.save_file_json(file_name)
+            break
 
 
 if __name__ == '__main__':

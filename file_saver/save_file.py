@@ -1,6 +1,6 @@
 from parsers_hh_superjob.file_saver.abcstact_method_json import SaveFileAbstract
 import json
-import csv
+
 
 
 class SaverFile(SaveFileAbstract):
