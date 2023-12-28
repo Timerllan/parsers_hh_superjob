@@ -27,7 +27,7 @@ def main():
 
 def format_saver(result):
     while True:
-        saver = int(input('выберите формат сохранение файла 0-json 1-txt 2-csv\n'))
+        saver = int(input('сохранение файла 0-json\n'))
         file_name = input('назовите файл')
         if saver >= 3:
             print('не правильный ввод есть только 3 варианта')
@@ -36,14 +36,6 @@ def format_saver(result):
         elif saver == 0:
             sf = SaverFile(result)
             sf.save_file_json(file_name)
-
-        #elif saver == 1:
-            #sf = SaverFile(result)
-            #sf.save_file_txt()
-
-        #elif saver == 2:
-            #sf = SaverFile(result)
-            #sf.save_file_csv()
 
 
 if __name__ == '__main__':
